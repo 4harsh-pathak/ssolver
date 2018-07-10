@@ -1,0 +1,4 @@
+<app-grid [grid]="grid" [solved]="solved"></app-grid>
+<button mat-raised-button color="accent" (click)="solve()" *ngIf="!solved">Solve</button>
+<button mat-raised-button color="accent" (click)="reset()" *ngIf="solved">Reset</button>
+{{grid | json}}
