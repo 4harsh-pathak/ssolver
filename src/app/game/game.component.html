@@ -1,4 +1,12 @@
-<app-grid [grid]="grid" [solved]="solved"></app-grid>
-<button mat-raised-button color="accent" (click)="solve()" *ngIf="!solved">Solve</button>
-<button mat-raised-button color="accent" (click)="reset()" *ngIf="solved">Reset</button>
-{{grid | json}}
+<div fxLayout="column" fxLayoutAlign="center">
+    <app-grid fxFlexOffset="5%" [grid]="grid" [solved]="solved" (dis)="disable($event)"></app-grid>
+    <div fxFlexOffset="5%">
+        <div fxLayout="row" fxLayoutAlign="center">
+            <span fxFlex></span>
+            <button mat-raised-button color="accent" (click)="solve()" *ngIf="!solved" [disabled]="dis">Solve</button>
+            <span fxFlex *ngIf="!solved"></span>
+            <button mat-raised-button color="accent" (click)="reset()">Reset</button>
+            <span fxFlex></span>
+        </div>
+    </div>
+</div>

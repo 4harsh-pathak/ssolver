@@ -13,3 +13,7 @@
 .right{
     border-right: 1px solid black;
 }
+
+.error {
+    color: #dc143c;
+}

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SudokuService } from 'src/app/sudoku.service';
-import { MatSnackBar } from '@angular/material';
+import { MatSnackBar, MatGridTile } from '@angular/material';
 
 @Component({
   selector: 'app-game',
@@ -10,11 +10,13 @@ import { MatSnackBar } from '@angular/material';
 export class GameComponent implements OnInit {
   grid: number[][];
   solved: Boolean;
+  dis: Boolean;
 
   constructor(private service: SudokuService, private sb: MatSnackBar) { }
 
   ngOnInit() {
     this.reset();
+    this.dis = false;
   }
 
   solve() {
@@ -30,6 +32,11 @@ export class GameComponent implements OnInit {
   reset() {
     this.grid = this.service.newGrid();
     this.solved = false;
+    this.dis = false;
+  }
+
+  disable(event: Boolean) {
+    this.dis = event;
   }
 
 }

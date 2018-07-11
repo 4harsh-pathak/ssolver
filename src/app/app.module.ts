@@ -12,6 +12,8 @@ import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { GridComponent } from './grid/grid.component';
 import { CellComponent } from './cell/cell.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,8 @@ import { CellComponent } from './cell/cell.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]
