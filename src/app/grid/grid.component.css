@@ -1,19 +1,28 @@
 .top{
-    border-top: 1px solid black;
+    border-top: 1px solid #1a237e;
+}
+
+.ntop{
+    border-top: 1px solid #efefef;
 }
 
 .bottom{
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #1a237e;
 }
 
 .left{
-    border-left: 1px solid black;
+    border-left: 1px solid #1a237e;
+}
+
+.nleft{
+    border-left: 1px solid #efefef;
 }
 
 .right{
-    border-right: 1px solid black;
+    border-right: 1px solid #1a237e;
 }
 
 .error {
     color: #dc143c;
+    font-size: 150%;
 }

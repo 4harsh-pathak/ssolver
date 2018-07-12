@@ -14,6 +14,7 @@ import { GridComponent } from './grid/grid.component';
 import { CellComponent } from './cell/cell.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { InstructionsComponent } from './instructions/instructions.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { environment } from '../environments/environment';
     AboutComponent,
     HomeComponent,
     GridComponent,
-    CellComponent
+    CellComponent,
+    InstructionsComponent
   ],
   imports: [
     BrowserModule,

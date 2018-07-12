@@ -6,11 +6,10 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./nav.component.css']
 })
 export class NavComponent implements OnInit {
-  @Input() drawer: any;
 
   list = [
-    {key: 'Home', value: ''},
-    {key: 'Solve', value: 'game'},
+    {key: 'How to?', value: 'instructions'},
+    {key: 'Start', value: 'game'},
     {key: 'About', value: 'about'},
   ];
 

@@ -1,18 +1,1 @@
-<mat-sidenav-container class="example-container">
-  <mat-sidenav #drawer mode="over" position="start" role="navigation">
-    <app-nav [drawer]="drawer"></app-nav>
-  </mat-sidenav>
-  <mat-sidenav-content>
-    <div fxLayout="row" fxLayoutAlign="center">
-      <mat-toolbar color="primary">
-        <button mat-button (click)="drawer.toggle()">
-          <i class="material-icons">
-            menu
-          </i>
-        </button>
-        <h1 class="mat-display-2">{{title}}</h1>
-      </mat-toolbar>
-    </div>
-    <router-outlet></router-outlet>
-  </mat-sidenav-content>
-</mat-sidenav-container>
+<router-outlet></router-outlet>

@@ -1,11 +1,24 @@
-<div fxLayout="column" fxLayoutAlign="center">
-    <app-grid fxFlexOffset="5%" [grid]="grid" [solved]="solved" (dis)="disable($event)"></app-grid>
-    <div fxFlexOffset="5%">
+<div fxLayout="column" fxLayoutAlign="center" class="full">
+    <div class="back-flap"></div>
+    <app-grid fxFlexOffset="10%" [grid]="grid" [solved]="solved" (dis)="disable($event)"></app-grid>
+    <div fxFlexOffset="20%">
         <div fxLayout="row" fxLayoutAlign="center">
             <span fxFlex></span>
-            <button mat-raised-button color="accent" (click)="solve()" *ngIf="!solved" [disabled]="dis">Solve</button>
+            <button mat-mini-fab color="primary" routerLink="">
+                <mat-icon>home</mat-icon>
+            </button>
+            <span fxFlex></span>
+            <button mat-mini-fab color="primary" (click)="solve()" *ngIf="!solved" [disabled]="dis">
+                <mat-icon>check</mat-icon>
+            </button>
             <span fxFlex *ngIf="!solved"></span>
-            <button mat-raised-button color="accent" (click)="reset()">Reset</button>
+            <button mat-mini-fab color="primary" (click)="reset()">
+                <mat-icon>refresh</mat-icon>
+            </button>
+            <span fxFlex></span>
+            <button mat-mini-fab color="primary" routerLink="/instructions">
+                ?
+            </button>
             <span fxFlex></span>
         </div>
     </div>
