@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>Ssolver</title>
@@ -10,8 +11,138 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#1976d2">
+  <style>
+    table {
+      margin: 50px auto;
+      border: 0;
+      border-spacing: 0;
+    }
+
+    td {
+      margin: 0;
+      padding: 0;
+    }
+
+    .div {
+      width: 100px;
+      height: 100px;
+      background-color: #3f51b5;
+      display: flex;
+      margin: 5px;
+    }
+
+    .one {
+      animation: down 3s linear 0s infinite normal;
+    }
+
+    .two {
+      animation: left 3s linear 0s infinite normal;
+    }
+
+    .three {
+      animation: left 3s linear 0s infinite normal;
+    }
+
+    .four {
+      animation: down 3s linear 0s infinite normal;
+    }
+
+    .six {
+      animation: top 3s linear 0s infinite normal;
+    }
+
+    .seven {
+      animation: right 3s linear 0s infinite normal;
+    }
+
+    .eight {
+      animation: right 3s linear 0s infinite normal;
+    }
+
+    .nine {
+      animation: top 3s linear 0s infinite normal;
+    }
+
+    @keyframes left {
+      0% {
+        transform: translateX(0);
+      }
+      66%,
+      100% {
+        transform: translateX(-110px);
+      }
+    }
+
+    @keyframes right {
+      0% {
+        transform: translateX(0);
+      }
+      66%,
+      100% {
+        transform: translateX(110px);
+      }
+    }
+
+    @keyframes top {
+      0% {
+        transform: translateY(0);
+      }
+      66%,
+      100% {
+        transform: translateY(-110px);
+      }
+    }
+
+    @keyframes down {
+      0% {
+        transform: translateY(0);
+      }
+      66%,
+      100% {
+        transform: translateY(110px);
+      }
+    }
+  </style>
 </head>
+
 <body class="mat-app-background">
-  <app-root></app-root>
+  <app-root>
+    <table>
+      <tr>
+        <td>
+          <div class="div one"></div>
+        </td>
+        <td>
+          <div class="two div"></div>
+        </td>
+        <td>
+          <div class="three div"></div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="four div"></div>
+        </td>
+        <td>
+          <div class="five div"></div>
+        </td>
+        <td>
+          <div class="six div"></div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="seven div"></div>
+        </td>
+        <td>
+          <div class="eight div"></div>
+        </td>
+        <td>
+          <div class="nine div"></div>
+        </td>
+      </tr>
+    </table>
+  </app-root>
 </body>
+
 </html>
